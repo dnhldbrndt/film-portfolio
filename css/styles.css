@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111111;
+    flex-direction: row;
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    color: #e3001b;
+}
+ 
+ul { 
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  text-align: center;
+}
+li { 
+  display: table-cell; 
+  position: relative; 
+
+}
+header a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+header a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+.hero {
+    background-image: url('../img/bg.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero-content .cta {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #ff9608;
+    border: none;
+    text-decoration: none;
+}
+
+.hero-content .cta:hover {
+    background-color: #e3001b;
+}
+
+.about, .films, .contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #111111;
+}
+
+.about h2, .films h2, .contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff9608;
+}
+
+.about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.film-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.film-item {
+    margin: 20px;
+    max-width: 300px;
+}
+
+.film-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.film-item h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+ 
+.separator {
+    height: 15em;  
+    background-color: #000000; 
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333333;
+    border: none;
+    color: #ffffff;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background-color: #ff9608;
+    border: none;
+    font-size: 1.2em;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #e3001b;
+}
+
+footer {
+    padding: 20px;
+    background-color: #000000;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #777777;
+}
+
+@media (max-width: 572px) {
+    header {
+        flex-direction: column;
+    }
+}
+@media (max-width: 350px) {
+	header h1 {
+		text-align: center;
+	}
+}
