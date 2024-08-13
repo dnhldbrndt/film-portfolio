@@ -16,7 +16,10 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #111111;
+    background-color: black;
+    z-index: 1000; /* Ensure it's above other elements */
+    position: relative; /* Ensure z-index applies */
+
 }
 
 header .logo h1 {
@@ -77,6 +80,11 @@ header nav ul li a:hover:after {
     text-align: center;
     color: #ffffff;
 }
+/* Ensure the hero content is centered */
+.hero-content {
+    padding: 260px 20px;
+}
+
 
 .hero-content h2 {
     font-size: 3em;
@@ -201,22 +209,24 @@ footer p {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100vh;	
+	z-index: 4; /* Lower than header */
 }
 
 .content-section {
-    display: none;
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
-    left: 100%;
-    transition: left 0.5s ease-in-out;
+    left: 100%; /* Initially off-screen */
+    transition: opacity 0.8s ease-in-out;
+    opacity: 0; /* Initially invisible */
 }
 
 .active {
-    display: block;
     left: 0;
+    opacity: 1; /* Fade in */
+    transition: opacity 0.8s ease-in-out;
 }
 
 .arrow {
@@ -224,12 +234,17 @@ footer p {
     top: 50%;
     transform: translateY(-50%);
     background-color: #333;
+	border-radius: 10px;
     color: #fff;
     border: none;
     font-size: 2em;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+}
+
+.arrow:hover {
+	background-color: #e3001b ;
 }
 
 .left-arrow {
